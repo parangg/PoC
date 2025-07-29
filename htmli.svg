@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120">
   <foreignObject width="100%" height="100%">
     <body xmlns="http://www.w3.org/1999/xhtml">
-      <p>hello</p>
-      <i>HTML Injected<i>
+      <h1 style="color: green;">Benvenuto!</h1>
+      <p>Questa è una dimostrazione di <strong>HTML Injection</strong>.</p>
     </body>
   </foreignObject>
 </svg>
