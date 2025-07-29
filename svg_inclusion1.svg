@@ -23,5 +23,4 @@
   <text x="150" y="165" font-family="Arial" font-size="16" fill="darkred" text-anchor="middle" dominant-baseline="middle">
     Rect
   </text>
-<image xlink:href="javascript:alert(1)"/>
 </svg>
