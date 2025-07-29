@@ -11,7 +11,7 @@
 
   <!-- Rombo verde -->
   <polygon points="210,40 260,100 210,160 160,100" fill="lightgreen" stroke="green" stroke-width="3"/>
-
+<image xlink:href="javascript:alert(1)"/>
   <!-- Testo centrato nel rombo -->
   <text x="210" y="100" font-family="Arial" font-size="20" fill="darkgreen" text-anchor="middle" dominant-baseline="middle">
     Rombo
