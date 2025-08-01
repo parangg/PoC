@@ -1,3 +1,5 @@
+<svg>
 <script data-cfasync="false" src="/javascript.js">
   alert(1)
 </script>
+</svg>
