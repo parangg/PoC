@@ -1,0 +1,37 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: Login Page
+  description: |
+    <div class="login-form">
+    <!-- Error Message -->
+    <div style="...">...</div>
+    <!-- resto del tuo HTML -->
+host: example.com
+basePath: /
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /:
+    post:
+      summary: Login
+      description: Effettua il login con username e password
+      parameters:
+        - in: body
+          name: credentials
+          description: Dati di login
+          required: true
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      responses:
+        '200':
+          description: Login successful
